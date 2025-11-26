@@ -58,6 +58,12 @@
     <Compile Include="Bai06.Designer.cs">
       <DependentUpon>Bai06.cs</DependentUpon>
     </Compile>
+    <Compile Include="Bai09.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Bai09.Designer.cs">
+      <DependentUpon>Bai09.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Bai04.resx">
@@ -65,6 +71,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Bai06.resx">
       <DependentUpon>Bai06.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Bai09.resx">
+      <DependentUpon>Bai09.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
