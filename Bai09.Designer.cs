@@ -35,7 +35,7 @@
             // 
             this.cboShape.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboShape.FormattingEnabled = true;
-            this.cboShape.Location = new System.Drawing.Point(70, 54);
+            this.cboShape.Location = new System.Drawing.Point(12, 12);
             this.cboShape.Name = "cboShape";
             this.cboShape.Size = new System.Drawing.Size(121, 24);
             this.cboShape.TabIndex = 0;
@@ -45,9 +45,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(554, 434);
             this.Controls.Add(this.cboShape);
             this.Name = "Bai09";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ComboBox Test";
             this.Load += new System.EventHandler(this.Bai09_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Bai09_Paint);

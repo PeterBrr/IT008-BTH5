@@ -77,17 +77,13 @@ namespace BTH5
                 case "Pie":
                     for (int i = 0; i < dataValues.Length; i++)
                     {
-                        // 1. Tính góc quét của phần hiện tại
                         float sweepAngle = (dataValues[i] / total) * 360;
 
-                        // 2. Tạo cọ màu tương ứng
                         using (Pen pen = new Pen(colors[i], 3))
                         {
-                            // 3. Vẽ miếng Pie tại góc startAngle với độ rộng sweepAngle
                             g.DrawPie(pen, x, y, size, size, startAngle, sweepAngle);
                         }
 
-                        // 4. Quan trọng: Cộng dồn góc để miếng sau vẽ tiếp theo miếng trước
                         startAngle += sweepAngle;
                     }             
                     break;
@@ -107,17 +103,13 @@ namespace BTH5
                 case "Filled Pie":
                     for (int i = 0; i < dataValues.Length; i++)
                     {
-                        // 1. Tính góc quét của phần hiện tại
                         float sweepAngle = (dataValues[i] / total) * 360;
-
-                        // 2. Tạo cọ màu tương ứng
+                    
                         using (Brush brush = new SolidBrush(colors[i]))
                         {
-                            // 3. Vẽ miếng Pie tại góc startAngle với độ rộng sweepAngle
                             g.FillPie(brush, x, y, size, size, startAngle, sweepAngle);
                         }
 
-                        // 4. Quan trọng: Cộng dồn góc để miếng sau vẽ tiếp theo miếng trước
                         startAngle += sweepAngle;
                     }
                     break;
