@@ -41,7 +41,7 @@ namespace BTH5
             int cy = h / 2;
             int radius = Math.Min(cx, cy) - 40; // Bán kính mặt đồng hồ
 
-            // --- BƯỚC 1: DỜI GỐC TỌA ĐỘ VỀ GIỮA TÂM ---
+            // DỜI GỐC TỌA ĐỘ VỀ GIỮA TÂM
             g.TranslateTransform(cx, cy);
 
             // Lưu trạng thái ban đầu của Graphics
@@ -65,15 +65,14 @@ namespace BTH5
             // Khôi phục trạng thái (để reset góc xoay về 0)
             g.Restore(state);
 
-            // --- BƯỚC 3: LẤY GIỜ HỆ THỐNG ---
+            // LẤY GIỜ HỆ THỐNG 
             DateTime now = DateTime.Now;
             float hour = now.Hour;
             float minute = now.Minute;
             float second = now.Second; 
 
-            // --- BƯỚC 4: VẼ KIM GIỜ ---
+            // VẼ KIM GIỜ 
             // Góc kim giờ: (Giờ * 30) + (Phút * 0.5)
-            // Ví dụ: 6h30 thì kim giờ nằm giữa số 6 và 7
             state = g.Save();
             float hourAngle = (hour % 12) * 30 + (minute * 0.5f);
             g.RotateTransform(hourAngle);
@@ -83,7 +82,7 @@ namespace BTH5
 
             g.Restore(state);
 
-            // --- BƯỚC 5: VẼ KIM PHÚT ---
+            // VẼ KIM PHÚT 
             // Góc kim phút: Phút * 6
             state = g.Save();
             float minAngle = minute * 6;
@@ -94,7 +93,7 @@ namespace BTH5
 
             g.Restore(state);
 
-            // --- 4. VẼ KIM GIÂY (MỚI) ---
+            // VẼ KIM GIÂY 
             state = g.Save();
             float secAngle = second * 6; // Mỗi giây quay 6 độ (360 / 60)
             g.RotateTransform(secAngle);
