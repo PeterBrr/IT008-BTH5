@@ -16,7 +16,7 @@ namespace BTH5
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Bai10());
+            Application.Run(new Bai11());
         }
     }
 }
