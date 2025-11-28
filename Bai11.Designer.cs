@@ -79,6 +79,7 @@
             this.groupBox3.Controls.Add(this.radTexture);
             this.groupBox3.Controls.Add(this.radHatch);
             this.groupBox3.Controls.Add(this.radSolid);
+            this.groupBox3.ForeColor = System.Drawing.Color.Blue;
             this.groupBox3.Location = new System.Drawing.Point(33, 269);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(200, 154);
@@ -89,7 +90,8 @@
             // radGradient
             // 
             this.radGradient.AutoSize = true;
-            this.radGradient.Location = new System.Drawing.Point(38, 103);
+            this.radGradient.ForeColor = System.Drawing.Color.Black;
+            this.radGradient.Location = new System.Drawing.Point(23, 117);
             this.radGradient.Name = "radGradient";
             this.radGradient.Size = new System.Drawing.Size(150, 20);
             this.radGradient.TabIndex = 3;
@@ -100,7 +102,8 @@
             // radTexture
             // 
             this.radTexture.AutoSize = true;
-            this.radTexture.Location = new System.Drawing.Point(38, 76);
+            this.radTexture.ForeColor = System.Drawing.Color.Black;
+            this.radTexture.Location = new System.Drawing.Point(23, 85);
             this.radTexture.Name = "radTexture";
             this.radTexture.Size = new System.Drawing.Size(107, 20);
             this.radTexture.TabIndex = 2;
@@ -111,7 +114,8 @@
             // radHatch
             // 
             this.radHatch.AutoSize = true;
-            this.radHatch.Location = new System.Drawing.Point(38, 49);
+            this.radHatch.ForeColor = System.Drawing.Color.Black;
+            this.radHatch.Location = new System.Drawing.Point(23, 53);
             this.radHatch.Name = "radHatch";
             this.radHatch.Size = new System.Drawing.Size(97, 20);
             this.radHatch.TabIndex = 1;
@@ -122,7 +126,8 @@
             // radSolid
             // 
             this.radSolid.AutoSize = true;
-            this.radSolid.Location = new System.Drawing.Point(38, 22);
+            this.radSolid.ForeColor = System.Drawing.Color.Black;
+            this.radSolid.Location = new System.Drawing.Point(23, 21);
             this.radSolid.Name = "radSolid";
             this.radSolid.Size = new System.Drawing.Size(93, 20);
             this.radSolid.TabIndex = 0;
@@ -135,6 +140,7 @@
             this.groupBox2.Controls.Add(this.label1);
             this.groupBox2.Controls.Add(this.btnColor);
             this.groupBox2.Controls.Add(this.txtWidth);
+            this.groupBox2.ForeColor = System.Drawing.Color.Blue;
             this.groupBox2.Location = new System.Drawing.Point(33, 149);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 100);
@@ -145,6 +151,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(7, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 16);
@@ -153,9 +160,10 @@
             // 
             // btnColor
             // 
-            this.btnColor.Location = new System.Drawing.Point(47, 60);
+            this.btnColor.ForeColor = System.Drawing.Color.Black;
+            this.btnColor.Location = new System.Drawing.Point(39, 60);
             this.btnColor.Name = "btnColor";
-            this.btnColor.Size = new System.Drawing.Size(75, 23);
+            this.btnColor.Size = new System.Drawing.Size(114, 23);
             this.btnColor.TabIndex = 1;
             this.btnColor.Text = "Color...";
             this.btnColor.UseVisualStyleBackColor = true;
@@ -166,15 +174,17 @@
             this.txtWidth.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtWidth.Location = new System.Drawing.Point(57, 20);
             this.txtWidth.Name = "txtWidth";
-            this.txtWidth.Size = new System.Drawing.Size(100, 22);
+            this.txtWidth.Size = new System.Drawing.Size(73, 22);
             this.txtWidth.TabIndex = 0;
             this.txtWidth.Text = "5";
+            this.txtWidth.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.radEllipse);
             this.groupBox1.Controls.Add(this.radRect);
             this.groupBox1.Controls.Add(this.radLine);
+            this.groupBox1.ForeColor = System.Drawing.Color.Blue;
             this.groupBox1.Location = new System.Drawing.Point(33, 27);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 100);
@@ -185,6 +195,7 @@
             // radEllipse
             // 
             this.radEllipse.AutoSize = true;
+            this.radEllipse.ForeColor = System.Drawing.Color.Black;
             this.radEllipse.Location = new System.Drawing.Point(26, 76);
             this.radEllipse.Name = "radEllipse";
             this.radEllipse.Size = new System.Drawing.Size(69, 20);
@@ -196,6 +207,7 @@
             // radRect
             // 
             this.radRect.AutoSize = true;
+            this.radRect.ForeColor = System.Drawing.Color.Black;
             this.radRect.Location = new System.Drawing.Point(26, 49);
             this.radRect.Name = "radRect";
             this.radRect.Size = new System.Drawing.Size(90, 20);
@@ -207,6 +219,7 @@
             // radLine
             // 
             this.radLine.AutoSize = true;
+            this.radLine.ForeColor = System.Drawing.Color.Black;
             this.radLine.Location = new System.Drawing.Point(26, 22);
             this.radLine.Name = "radLine";
             this.radLine.Size = new System.Drawing.Size(53, 20);
