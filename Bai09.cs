@@ -15,6 +15,10 @@ namespace BTH5
         public Bai09()
         {
             InitializeComponent();
+
+            this.ResizeRedraw = true;
+
+            this.DoubleBuffered = true;
         }
 
         private void Bai09_Load(object sender, EventArgs e)

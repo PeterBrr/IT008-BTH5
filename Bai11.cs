@@ -173,5 +173,53 @@ namespace BTH5
                 }
             }
         }
+
+        private void picCanvas_Resize(object sender, EventArgs e)
+        {
+            // Kiểm tra kích thước hợp lệ (để tránh lỗi khi thu nhỏ xuống Taskbar = 0)
+            if (picCanvas.Width <= 0 || picCanvas.Height <= 0) return;
+
+            // Nếu chưa có bitmap cũ (lần đầu chạy) thì không cần copy
+            if (_bitmapBuffer == null)
+            {
+                _bitmapBuffer = new Bitmap(picCanvas.Width, picCanvas.Height);
+                using (Graphics g = Graphics.FromImage(_bitmapBuffer)) g.Clear(Color.White);
+                return;
+            }
+
+            // Nếu kích thước mới nhỏ hơn kích thước Bitmap hiện tại -> KHÔNG LÀM GÌ CẢ
+            // (Giữ nguyên Bitmap to để bảo toàn hình vẽ)
+            if (picCanvas.Width <= _bitmapBuffer.Width && picCanvas.Height <= _bitmapBuffer.Height)
+            {
+                picCanvas.Invalidate(); // Chỉ cần vẽ lại
+                return;
+            }
+
+            // Tính kích thước mới: Phải là LỚN NHẤT giữa kích thước form và kích thước ảnh cũ
+            // Để đảm bảo không chiều nào bị cắt bớt
+            int newWidth = Math.Max(picCanvas.Width, _bitmapBuffer.Width);
+            int newHeight = Math.Max(picCanvas.Height, _bitmapBuffer.Height);
+
+            // Tạo Bitmap với kích thước bảo toàn dữ liệu
+            Bitmap newBitmap = new Bitmap(newWidth, newHeight);
+
+            using (Graphics g = Graphics.FromImage(newBitmap))
+            {
+                g.Clear(Color.White); // Xóa nền trắng
+
+                // B. Vẽ lại (Copy) hình ảnh từ Bitmap cũ sang Bitmap mới
+                // Để giữ lại những gì người dùng đã vẽ trước đó
+                g.DrawImage(_bitmapBuffer, 0, 0);
+            }
+
+            // C. Giải phóng Bitmap cũ để đỡ tốn RAM
+            _bitmapBuffer.Dispose();
+
+            // D. Gán Bitmap mới vào biến toàn cục
+            _bitmapBuffer = newBitmap;
+
+            // E. Vẽ lại màn hình
+            picCanvas.Invalidate();
+        }
     }
 }
